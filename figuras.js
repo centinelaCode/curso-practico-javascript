@@ -73,3 +73,22 @@ console.groupEnd();
    }
 
  console.groupEnd();
+
+
+
+
+ // Interaccion ocn HTML
+ // Cuadrado
+ function calcularPerimetroCuadrado() {
+   const input = document.getElementById("inputCuadrado");
+   const value = input.value;
+   const perimetro = perimetroCuadrado(value);
+   alert(perimetro);
+ }
+
+ function calcularAreaCuadrado() {
+   const input = document.getElementById("inputCuadrado");
+   const value = input.value;
+   const area = areaCuadrado(value);
+   alert(area);
+ }
