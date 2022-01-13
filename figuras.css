@@ -1,0 +1,112 @@
+:root{
+   --fondo: #122130;
+   --primary: #124352;
+   --secundary: #146d80;
+   --letter: #1aa2b6;
+   --light: #20dbd8;
+   --white: #f0f0f0;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {   
+   font-family: 'Roboto', sans-serif;
+   background-color: var(--fondo);
+   color: var(--white);
+}
+
+header {
+   padding: 30px;   
+}
+
+header h1 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+header p {
+   color: var(--light);
+}
+
+.container {
+   width: 1000px;   
+   /* background-color: var(--secundary); */
+   margin: 0 auto;   
+}
+
+.container-cards {
+   width: 100%;
+   display: flex;
+   /* flex-direction: column; */
+   justify-content: space-between;
+   /* align-items: center; */
+   /* flex-wrap: wrap; */
+   flex-wrap: wrap;
+}
+
+.container-cards section {
+   width: 280px;
+   height: 460px;
+   padding: 15px;
+   border: 5px solid var(--light);
+   background-color: var(--white);
+   color: var(--letter);
+   border-radius: 10px;
+   /* margin-bottom: 20px; */
+}
+
+.container-cards section h2 {
+   font-size: 2rem;
+   text-align: center;
+   color: var(--primary);
+   margin-bottom: 10px;
+}
+
+.container-cards section p {
+   font-size: 1rem;
+   color: var(--secundary);
+   margin-bottom: 10px;
+}
+
+.container-cards section form {
+   height: 340px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   /* align-items: center; */
+
+   
+}
+
+.container-cards section form label{
+   display: block;
+   margin-bottom: 5px;
+   margin-top: 5px;
+   color: var(--fondo);
+   font-size: .8rem;
+}
+
+.container-cards section form input{
+   display: block;
+   width: 100%;
+   /* margin-bottom: 10px; */
+   padding: 10px;
+   border: 1px solid #000;
+   border-radius: 5px;
+}
+
+.container-cards section form button {
+   width: 100%;
+   background-color: var(--secundary);
+   color: var(--white);
+   padding: 6px;
+   border-radius: 10px;
+   margin-bottom: 10px;
+   margin-: 10px;
+}
+
+

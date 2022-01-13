@@ -78,17 +78,67 @@ console.groupEnd();
 
 
  // Interaccion ocn HTML
+
+const inputLado = document.getElementById("inputCuadrado");
+
+const inputLado1 = document.getElementById("inputTriangulolado1");
+const inputLado2 = document.getElementById("inputTriangulolado2");
+const inputBase = document.getElementById("inputTrianguloBase");
+const inputAltura = document.getElementById("inputTrianguloAltura");
+
+const inputRadio = document.getElementById("inputCirculoRadio");
+
+
+
+
  // Cuadrado
  function calcularPerimetroCuadrado() {
-   const input = document.getElementById("inputCuadrado");
-   const value = input.value;
+   
+   const value = inputLado.value;
    const perimetro = perimetroCuadrado(value);
-   alert(perimetro);
+   alert(`El perímetro del Cuadrado es de ${perimetro}cm`);
  }
 
  function calcularAreaCuadrado() {
-   const input = document.getElementById("inputCuadrado");
-   const value = input.value;
+   
+   const value = inputLado.value;
    const area = areaCuadrado(value);
-   alert(area);
+   alert(`El área del Cuadrado es de ${area}cm`);
+ }
+
+ // Triangulo
+ function calcularPerimetroTriangulo() {   
+   const valueLado1 = Number(inputLado1.value);
+   const valueLado2 = Number(inputLado2.value);
+   const valueBase = Number(inputBase.value);
+   
+   // console.log(valueLado1, valueLado2, valueBase, valueAltura);
+   const perimetro = perimetroTriangulo(valueLado1, valueLado2, valueBase);
+   alert(`El perímetro del Triangulo es de ${perimetro}cm`);
+ }
+
+ function calcularAreaTriangulo() {
+   const valueBase = Number(inputBase.value);
+   console.log(valueBase);
+   const valueAltura = Number(inputAltura.value);   
+
+   // console.log(valueLado1, valueLado2, valueBase, valueAltura);
+   const area = areaTriangulo(valueBase, valueAltura);
+   alert(`El área del Triangulo es de ${area}cm`);
+ }
+
+
+ // Circulo
+ function calcularPerimetroCirculo() {
+   
+   const value = inputRadio.value;
+   const perimetro = perimetroCirculo(value);
+   alert(`El perímetro del Circulo es de ${perimetro}cm`);
+ }
+
+ function calcularAreaCirculo() {
+   
+   const value = inputRadio.value;
+   const area = areaCirculo(value);
+   alert(`El área del Circulo es de ${area}cm`);
  }
