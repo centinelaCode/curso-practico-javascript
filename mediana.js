@@ -1,4 +1,4 @@
-const lista1 = [8,0,-5,2,1,7];
+const lista1 = [100,200,500,400000000];
 console.log(lista1, 'Lista Original');
 
 function ordenarArray(lista) {
@@ -16,26 +16,37 @@ function ordenarArray(lista) {
    return lista;
 }
 
+function esPar(numero) {
+   if( numero % 2 === 0 ){ 
+      return true;
+   } else {
+      return false;
+   }
+}
+
+function promedio(num1, num2) {
+   return (num1 + num2) / 2;
+}
+
 const listaOrdenada = ordenarArray(lista1);
 // console.log(listaOrdenada);
 
-const mitadLista = lista1.length / 2;
-// console.log(mitadLista, 'mitad lista')
-const mitadRedondeada = Math.round(mitadLista) ;
-// console.log(mitadRedondeada, 'mitad redondeada');
+const mitad = parseInt(lista1.length / 2);
 
 
 console.log(listaOrdenada, 'Lista Ordenada');
 
-let medina;
-if ( lista1.length % 2 === 0 ) {
+let mediana;
+if ( esPar(lista1.length) ) {
    // longitud del array par
-   // console.log(listaOrdenada[mitadLista]);
-   // console.log(listaOrdenada[mitadLista + 1]);
-   const mediana = (listaOrdenada[mitadLista - 1] + listaOrdenada[mitadLista]) / 2;
-   console.log(mediana, 'Mediana');
+   let el1 = listaOrdenada[mitad - 1]; 
+   let el2 = listaOrdenada[mitad]; 
+   console.log(el1,el2);
+   mediana = promedio(el1, el2);
+   console.log(mediana, 'mediana');     
 } else {
    // longitud del array impar
-   const mediana = listaOrdenada[mitadRedondeada - 1];
-   console.log(mediana);
+   console.log(parseInt(mitad), 'mitad')
+   let mediana = listaOrdenada[mitad];
+   console.log(mediana, 'mediana')
 }
